@@ -49,7 +49,13 @@ module.exports = (_, argv) => ({
         pdp: "pdp@http://localhost:3000/remoteEntry.js",
         cart: "cart@http://localhost:3000/remoteEntry.js",
       },
-      exposes: {},
+      exposes: {
+        // cart expõe as funções do carrinho e Login, MiniCart e CartContent expõem os componentes da UI
+        "./cart": "./src/cart.js",
+        "./Login": "./src/Login.jsx",
+        "./MiniCart": "./src/MiniCart.jsx",
+        "./CartContent": "./src/CartContent.jsx",
+      },
       shared: {
         ...deps,
         react: {
