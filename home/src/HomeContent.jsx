@@ -13,7 +13,7 @@ export default function HomeContent() {
   }, []);
 
   return (
-    <div className="my-10 grid grid-cols-4 gap-5">
+    <div className="grid grid-cols-4 gap-5">
       {products.map((product) => (
         <div key={product.id}>
           <Link to={`/product/${product.id}`}>
