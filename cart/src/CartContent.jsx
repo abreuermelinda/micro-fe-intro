@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import MiniCart from "./MiniCart";
 
 import { cart, clearCart } from "cart/cart";
 import { currency } from "home/products";
@@ -7,10 +6,14 @@ import { currency } from "home/products";
 export default function CartContent() {
   const [items, setItems] = useState([]);
 
-  useEffect(
+  /* useEffect(
     () => cart.subscribe((value) => setItems(value?.cartItems ?? [])),
     []
-  );
+  ); */
+
+  useEffect(() => {
+    cart.subscribe((value) => setItems(value?.cartItems ?? []));
+  }, []);
 
   return (
     <>
