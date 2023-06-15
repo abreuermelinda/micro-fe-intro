@@ -5,7 +5,8 @@ describe("My First E2E Test", () => {
     cy.get("#loginbtn").click();
     cy.get("#showcart").click();
     cy.get("#clearcart").click();
-    cy.get("#addtocart_1").click();
+    cy.get("#addtocart_2").click();
     cy.get("#cart").click();
+    cy.get("#grand_total").should("contain", "$8.99");
   });
 });
