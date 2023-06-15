@@ -46,8 +46,8 @@ module.exports = (_, argv) => ({
       remotes: {
         // Listando as rotas, incluindo uma rota autoreferencial para a aplicação cart:
         home: "home@http://localhost:3000/remoteEntry.js",
-        pdp: "pdp@http://localhost:3000/remoteEntry.js",
-        cart: "cart@http://localhost:3000/remoteEntry.js",
+        pdp: "pdp@http://localhost:3001/remoteEntry.js",
+        cart: "cart@http://localhost:3002/remoteEntry.js",
       },
       exposes: {
         // cart expõe as funções do carrinho e Login, MiniCart e CartContent expõem os componentes da UI

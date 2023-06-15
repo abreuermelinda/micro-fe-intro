@@ -4,6 +4,7 @@ import { getProducts, currency } from "./products";
 import { addToCart, useLoggedIn } from "cart/cart"
 
 export default function HomeContent() {
+  const loggedIn = useLoggedIn();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {

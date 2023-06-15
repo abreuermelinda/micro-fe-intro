@@ -9,7 +9,7 @@ export default function MiniCart() {
 
   useEffect(() => {
     setItems(cart.value?.cartItems);
-     cart.subscribe((c) => {
+    cart.subscribe((c) => {
       setItems(c?.cartItems);
     });
   }, []);
